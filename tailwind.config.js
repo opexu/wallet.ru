@@ -2,6 +2,7 @@
 export default {
     darkMode: 'class',
     content: [
+        './*.{html,vue,ts,js}',
         './src/*.{html,vue,ts,js}', 
         './src/**/*.{html,vue,ts,js}' 
     ],
