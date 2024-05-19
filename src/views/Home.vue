@@ -24,7 +24,7 @@
 import { RouterView, useRoute, useRouter } from 'vue-router'
 import Image from 'primevue/image';
 import Button from 'primevue/button';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 const route = useRoute();
 const router = useRouter();
 interface INavigationBtn {
@@ -41,6 +41,8 @@ const navBtns = ref<INavigationBtn[]>([
         url: 'order-book',
     }
 ]);
+
+onMounted(() => router.push( navBtns.value[0].url ))
 </script>
 
 <style scoped>

@@ -28,7 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: npm install, build
-        working-directory: .
+        working-directory: ./
         run: | 
           npm install
           npm run build

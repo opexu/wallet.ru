@@ -6,7 +6,10 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig(({ command, mode }) => ({
     plugins: [ vue(), ],
-    root: path.resolve( __dirname, '.' ),
+    root: path.resolve( __dirname, 'src' ),
+    build: {
+        outDir: 'dist',
+    },
     server: {
         port: 3000,
         watch: {
