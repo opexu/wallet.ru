@@ -10,6 +10,7 @@ export default defineConfig(({ command, mode }) => ({
     build: {
         outDir: 'dist',
     },
+    base: ((process.env.GITHUB_REPOSITORY ?? "") + "/").match(/(\/.*)/)?.[1],
     server: {
         port: 3000,
         watch: {
